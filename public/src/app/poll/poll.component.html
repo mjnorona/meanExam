@@ -1,0 +1,16 @@
+<a [routerLink] = "['/','dashboard']">Go to Polls</a>
+
+<table>
+  <tr>
+    <th>Option</th>
+    <th>Current Count of Votes</th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor = "let option of poll.options">
+    <td>{{option.content}}</td>
+    <td>{{option.votes}}</td>
+    <td><button (click) = 'vote(option._id)'>Vote</button></td>
+  </tr>
+</table>
+
+{{ poll | json }}

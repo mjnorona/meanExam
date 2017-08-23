@@ -1,0 +1,41 @@
+<a [routerLink] = "['/', 'dashboard']">Cancel</a>
+<h2>Put the question and options here:</h2>
+
+<form (submit) = 'onSubmit()'>
+  Question:
+  <input 
+    name="question"
+    minlength="8"
+    required
+    [(ngModel)] = 'creation.question'
+    >
+  Option 1:
+  <input 
+    name="option1"
+    minlength="3"
+    required
+    [(ngModel)] = 'creation.option1'>
+  Option 2:
+  <input 
+    name="option2" 
+    minlength="3"
+    required
+    [(ngModel)] = 'creation.option2'
+    >
+  Option 3:
+  <input 
+    name="option3"
+    minlength="3"
+    required
+    [(ngModel)] = 'creation.option3'
+    >
+  Option 4:
+  <input 
+    name="option4"
+    minlength="3"
+    required
+    [(ngModel)] = 'creation.option4'>
+  <button type="submit">Create Poll</button>
+</form>
+
+{{ creation | json}}

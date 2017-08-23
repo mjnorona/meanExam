@@ -1,0 +1,14 @@
+
+<h1>Log In</h1>
+<form (submit) = 'onSubmit()'>
+  Username: 
+  <input 
+    name="username" 
+    required
+    [(ngModel)] = 'user.username'
+    #username ='ngModel'>
+  <button *ngIf = 'username.valid' type="submit" [routerLink] = "['dashboard']">Submit</button>
+</form>
+
+{{user|json}}
+
